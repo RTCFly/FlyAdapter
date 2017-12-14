@@ -1,9 +1,6 @@
-const { detectBrowser } = require('rtcdetector');
+require('./shim.factory');
 
-const browserInfo = detectBrowser();
-//This is not yet implemented, soon though!
-console.log("got browser info", browserInfo)
-module.exports = {
+const API = {
   RTCPeerConnection:window.RTCPeerConnection,
   RTCDataChannel:window.RTCDataChannel, 
   RTCDataChannelEvent:window.RTCDataChannelEvent,
@@ -25,3 +22,4 @@ module.exports = {
   
   
 }; 
+module.exports = API;
