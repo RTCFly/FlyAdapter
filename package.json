@@ -2,7 +2,7 @@
   "name": "flyadapter",
   "version": "0.0.13",
   "description": "Insulate WebRTC apps with modular JavaScript and TypeScript",
-  "main": "./index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "prepublish": "npm run build",
     "build": "babel --presets es2015 -d dist/ src/"
