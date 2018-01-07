@@ -1,4 +1,4 @@
-require('./shim.factory');
+//require('./shim.factory');
 
 const API = {
   RTCPeerConnection:window.RTCPeerConnection,
