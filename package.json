@@ -1,11 +1,9 @@
 {
   "name": "flyadapter",
-  "version": "0.0.17",
+  "version": "0.0.18-alpha",
   "description": "Insulate WebRTC apps with modular JavaScript and TypeScript",
   "main": "./src/index.js",
   "scripts": {
-    "prepublish": "npm run build",
-    "build": "babel --presets es2015 -d dist/ src/"
   },
   "repository": {
     "type": "git",
@@ -18,8 +16,8 @@
   },
   "homepage": "https://github.com/RTCFly/FlyAdapter#readme",
   "dependencies": {
-    "rtcdetector": "^1.0.5",
-    "rtcpeerconnection-shim": "^1.2.3"
+    "rtcpeerconnection-shim": "^1.2.3",
+    "webrtc-adapter": "*"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

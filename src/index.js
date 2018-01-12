@@ -1,4 +1,4 @@
-//require('./shim.factory');
+require('webrtc-adapter');
 
 const API = {
   RTCPeerConnection:window.RTCPeerConnection,
