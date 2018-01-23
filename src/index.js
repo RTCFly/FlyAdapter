@@ -18,7 +18,7 @@ const API = {
   RTCIdentityEvent:window.RTCIdentityEvent,
   RTCIdentityErrorEvent:window.RTCIdentityErrorEvent,
   RTCCertificate:window.RTCCertificate,
-  getUserMedia:window.navigator.mediaDevices.getUserMedia
+  getUserMedia:window.navigator.mediaDevices.getUserMedia.bind(window.navigator.mediaDevices)
   
   
 }; 
