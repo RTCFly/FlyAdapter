@@ -18,8 +18,7 @@ const API = {
   RTCIdentityEvent:window.RTCIdentityEvent,
   RTCIdentityErrorEvent:window.RTCIdentityErrorEvent,
   RTCCertificate:window.RTCCertificate,
-  getUserMedia:window.navigator.mediaDevices.getUserMedia.bind(window.navigator.mediaDevices)
-  
-  
+  getUserMedia:window.navigator.mediaDevices.getUserMedia.bind(window.navigator.mediaDevices),
+  enumerateDevices:window.navigator.mediaDevices.enumerateDevices.bind(window.navigator.mediaDevices)
 }; 
 module.exports = API;
