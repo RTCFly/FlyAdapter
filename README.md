@@ -36,6 +36,7 @@ interface IFlyAdapter {
   RTCIdentityErrorEvent();
   RTCCertificate();
   getUserMedia();
+  enumerateDevices();
 }
 
 ```
