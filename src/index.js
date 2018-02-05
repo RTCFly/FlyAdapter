@@ -19,6 +19,9 @@ const API = {
   RTCIdentityErrorEvent:window.RTCIdentityErrorEvent,
   RTCCertificate:window.RTCCertificate,
   getUserMedia:window.navigator.mediaDevices.getUserMedia.bind(window.navigator.mediaDevices),
-  enumerateDevices:window.navigator.mediaDevices.enumerateDevices.bind(window.navigator.mediaDevices)
+  enumerateDevices:window.navigator.mediaDevices.enumerateDevices.bind(window.navigator.mediaDevices),
+  onDeviceChange: function(callback){
+    this.ondevicechange = callback; 
+  }.bind(window.navigator.mediaDevices)
 }; 
 module.exports = API;

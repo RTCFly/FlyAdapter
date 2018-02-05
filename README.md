@@ -37,6 +37,7 @@ interface IFlyAdapter {
   RTCCertificate();
   getUserMedia();
   enumerateDevices();
+  onDeviceChange(callback);
 }
 
 ```
