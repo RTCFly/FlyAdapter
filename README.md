@@ -9,6 +9,13 @@ It simple wraps the WebRTC API and includes the latest version of [WebRTC Adapte
 import { getUserMedia, RTCPeerConnection } from 'flyadapter';
 
 ```
+#### New something newable?
+
+```
+import { FlyAdapterClass } from 'flyadapter';
+
+```
+This, along with the IFlyAdapter interface should place nicely with frameworks such as InversifyJS 
 
 Why? We found WebRTC to be hard to work with in injection style architectures and with TDD. 
 This package makes it easy to fake out the WebRTC API, whilst quietly having the benfits of [WebRTC Adapter](https://github.com/webrtc/adapter).

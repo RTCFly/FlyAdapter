@@ -24,4 +24,10 @@ const API = {
     this.ondevicechange = callback; 
   }.bind(window.navigator.mediaDevices)
 }; 
+
+var FlyAdapterClass = function FlyAdapter(){
+  
+}
+FlyAdapterClass.prototype = Object.assign({},FlyAdapterClass.prototype, API);
+API.FlyAdapterClass = FlyAdapterClass;
 module.exports = API;
