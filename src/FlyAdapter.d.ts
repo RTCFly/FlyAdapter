@@ -1,6 +1,6 @@
 declare interface IFlyAdapter {
     
-  RTCPeerConnection();
+  RTCPeerConnection(configuration:IRTCConfiguration) :IRTCPeerConnection;
   RTCDataChannel();
   RTCDataChannelEvent();
   RTCSessionDescription(); 
@@ -17,5 +17,71 @@ declare interface IFlyAdapter {
   RTCIdentityEvent();
   RTCIdentityErrorEvent();
   RTCCertificate();
-  getUserMedia();
+  getUserMedia(constraints:IMediaStreamConstraints): Promise<any>;
+}
+
+declare interface IMediaStreamConstraints {
+  video:boolean|any;
+  audio:boolean|any;
+}
+
+declare interface IRTCConfiguration {
+  bundlePolicy:string; 
+  certificates:Array<IRTCCertificate>;
+  iceCandidatePoolSize:Number; 
+  iceServers:Array<IRTCIceServer>;
+  iceTransportPolicy:string;
+  peerIdentity:string; 
+  rtcpMuxPolicy:string;
+}
+declare interface IRTCIceServer {
+  credential:string;
+  credentialType:string;
+  urls:string|Array<string>;
+  username:string;
+}
+
+declare interface IRTCCertificate {
+  expires:Date;
+}
+
+declare interface IRTCPeerConnection {
+  connectionState:string; 
+  currentLocalDescription:string;
+  currentRemoteDescription:string; 
+  defaultIceServers:Array<IRTCIceServer>;
+  iceConnectionState:string; 
+  iceGatheringState:string;
+  localDescription:IRTCSessionDescription; 
+  peerIdentity:IRTCIdentityAssertion;
+  pendingLocalDescription:IRTCSessionDescription;
+  pendingRemoteDescription:IRTCSessionDescription;
+  remoteDescription:IRTCSessionDescription;
+  sctp:IRTCSctpTransport;
+  canTrickleIceCanidates:boolean; 
+  signallingState:string;
+  
+  //implement methods
+  
+}
+declare interface IRTCSctpTransport {
+  maxMessageSize:Number;
+  transport:any; 
+}
+declare interface IRTCSessionDescription {
+  type:RTCSdpType;
+  sdp:string;
+}
+
+enum RTCSdpType {
+  answer ="answer",
+  offer = "offer",
+  pranswer = "pranswer",
+  rollback = "rollback"
+}
+
+
+declare interface IRTCIdentityAssertion {
+  idp:string;
+  name:string; 
 }
