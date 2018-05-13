@@ -2,6 +2,9 @@
 
 Fly Adapter provides an easy way to work with modular, stable WebRTC.
 
+## Using this package 
+This is being developed along side [RTCFly](https://www.github.com/rtcfly/rtcfly), at present, TypeScript support doesn't really work, but we're hoping that in the next few months it can be stripped out of RTCFly and shared here. 
+
 #### What does it do? 
 It simple wraps the WebRTC API and includes the latest version of [WebRTC Adapter](https://github.com/webrtc/adapter) on install. 
 
@@ -15,6 +18,8 @@ import { getUserMedia, RTCPeerConnection } from 'flyadapter';
 import { FlyAdapterClass } from 'flyadapter';
 
 ```
+
+
 This, along with the IFlyAdapter interface should place nicely with frameworks such as InversifyJS 
 
 Why? We found WebRTC to be hard to work with in injection style architectures and with TDD. 
